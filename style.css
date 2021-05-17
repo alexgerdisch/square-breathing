@@ -30,6 +30,7 @@
 }
 
 .counter {
+    margin-top: 10px;
     font-size: 5rem;
     text-align: center;
     color: white;

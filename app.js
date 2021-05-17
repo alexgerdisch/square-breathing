@@ -2,9 +2,7 @@ let counter = document.getElementById("counter");
 let instruction = document.getElementById("instruction");
 let cycleCount = 1;
 
-// remove initial 1sec input delay from transition
-instruction.style.fontSize = "5rem";
-counter.style.fontSize = "7rem";
+
 
 function updateCounter() {
     let tempCount = parseInt(counter.innerHTML, 10);
