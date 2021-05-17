@@ -12,16 +12,18 @@ function updateCounter() {
     // Every 4 seconds, change instruction
     if (cycleCount < 4) {
         instruction.innerHTML=`Inhale`;
-        instruction.style.fontSize = "5rem";
-        counter.style.fontSize = "7rem";
+        
+        counter.style.transform = "scale(1.5)";
+        instruction.style.transform = "scale(1.5)";
         cycleCount++;
     } else if (cycleCount >= 4 && cycleCount < 8) {
         instruction.innerHTML=`Hold`;
         cycleCount++;
     } else if (cycleCount >= 8 && cycleCount < 12) {
         instruction.innerHTML=`Exhale`;
-        instruction.style.fontSize = "3rem";
-        counter.style.fontSize = "5rem";
+        
+        instruction.style.transform = "scale(1)";
+        counter.style.transform = "scale(1)";
         cycleCount++;
     } else if (cycleCount >= 12 && cycleCount < 16) {
         instruction.innerHTML=`Hold`;
@@ -29,8 +31,8 @@ function updateCounter() {
     } else if (cycleCount == 16) {
         cycleCount = 1;
         instruction.innerHTML=`Inhale`;
-        instruction.style.fontSize = "5rem";
-        counter.style.fontSize = "7rem";
+        instruction.style.transform = "scale(1.5)";
+        counter.style.transform = "scale(1.5)";
     }
 
     if (tempCount < 4) {
