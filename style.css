@@ -11,6 +11,7 @@
     justify-items: center;
     align-items: center;
     background-color: #052a30;
+    transition: background-color 4s;
 }
 /* .app-container {
     display: grid;
