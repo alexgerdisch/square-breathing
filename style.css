@@ -38,6 +38,13 @@
     -webkit-transform: translateZ(0);
 }
 
-.info-modal {
-    position: absolute;
+.stopwatch {
+    position: fixed;
+    left: 0;
+    top: 0;
+    color:#788b8f;
+    margin-top: 10px;
+    margin-left: 10px;
 }
+
+
