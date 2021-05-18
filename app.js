@@ -3,6 +3,7 @@ let instruction = document.getElementById("instruction");
 let cycleCount = 1;
 let globalCount = document.getElementById("total");
 let totalCount = 1;
+let view = document.getElementById("view");
 
 
 function updateCounter() {
@@ -14,6 +15,7 @@ function updateCounter() {
         instruction.innerHTML=`Inhale`;
         counter.style.transform = "scale(1.5)";
         instruction.style.transform = "scale(1.5)";
+        view.style.backgroundColor = "#30052A";
         cycleCount++;
     } else if (cycleCount >= 4 && cycleCount < 8) {
         instruction.innerHTML=`Hold`;
@@ -22,6 +24,7 @@ function updateCounter() {
         instruction.innerHTML=`Exhale`;
         instruction.style.transform = "scale(1)";
         counter.style.transform = "scale(1)";
+        view.style.backgroundColor = "#052a30";
         cycleCount++;
     } else if (cycleCount >= 12 && cycleCount < 16) {
         instruction.innerHTML=`Hold`;
@@ -31,6 +34,7 @@ function updateCounter() {
         instruction.innerHTML=`Inhale`;
         instruction.style.transform = "scale(1.5)";
         counter.style.transform = "scale(1.5)";
+        view.style.backgroundColor = "#30052A";
     }
 
     // Updating Main Counter
