@@ -10,17 +10,10 @@
     height: 100vh;
     justify-items: center;
     align-items: center;
-    background-color: #052a30;
+    background-color: #196377;
+    
     transition: background-color 4s;
 }
-/* .app-container {
-    display: grid;
-    background-color: blue;
-    border-radius: 50%;
-    width: 400px;
-    height: 400px;
-    align-items: center;
-} */
 
 .instruction {
     cursor: pointer;
@@ -45,7 +38,7 @@
     position: fixed;
     left: 0;
     top: 0;
-    color:#788b8f;
+    color:#b0ccd1;
     margin-top: 10px;
     margin-left: 10px;
 }
