@@ -5,6 +5,7 @@ let globalCount = document.getElementById("total");
 let totalCount = 1;
 let view = document.getElementById("view");
 
+let startMeditating = setInterval(updateCounter, 1000);
 
 function updateCounter() {
     let tempCount = parseInt(counter.innerHTML, 10);
@@ -15,7 +16,7 @@ function updateCounter() {
         instruction.innerHTML=`Inhale`;
         counter.style.transform = "scale(1.5)";
         instruction.style.transform = "scale(1.5)";
-        view.style.backgroundColor = "#30052A";
+        view.style.backgroundColor = "#39204e";
         cycleCount++;
     } else if (cycleCount >= 4 && cycleCount < 8) {
         instruction.innerHTML=`Hold`;
@@ -34,7 +35,7 @@ function updateCounter() {
         instruction.innerHTML=`Inhale`;
         instruction.style.transform = "scale(1.5)";
         counter.style.transform = "scale(1.5)";
-        view.style.backgroundColor = "#30052A";
+        view.style.backgroundColor = "#39204e";
     }
 
     // Updating Main Counter
@@ -67,5 +68,23 @@ function updateCounter() {
 }
 
 
-// Starting the Meditation
-setInterval(updateCounter, 1000);
+function toggleMeditation() {
+    
+    if (view.classList.contains("active")) {
+        clearInterval(startMeditating);
+        view.classList.toggle("active");
+    } else {
+        startMeditating = setInterval(updateCounter, 1000);
+        view.classList.toggle("active");
+        
+    }
+}
+
+view.addEventListener("click", toggleMeditation);
+
+
+
+
+
+
+
