@@ -20,9 +20,10 @@
     font-size: 3rem;
     text-align: center;
     color: rgb(255, 255, 255);
-    transition: transform 4s;
+    transition: transform 4s, opacity 500ms;
     -webkit-transform: translateZ(0);
 }
+
 
 .counter {
     cursor: pointer;
