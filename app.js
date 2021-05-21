@@ -11,6 +11,9 @@ function updateCounter() {
     let tempCount = parseInt(counter.innerHTML, 10);
     totalCount++;
     
+    // I have to put this here. it resets the letter spacing after Resuming
+    instruction.style.letterSpacing= "normal";
+    
     // Changing Instruction text
     if (cycleCount < 4) {
         instruction.innerHTML=`Inhale`;
@@ -50,7 +53,6 @@ function updateCounter() {
    numMinutes = Math.floor(totalCount / 60);
    numSeconds = totalCount % 60;
    
-
     if (numMinutes >= 1 && numMinutes < 10 && numSeconds < 10) {
         globalCount.innerHTML= `0${numMinutes}:0${numSeconds}`;
     } else if (numMinutes >= 1 && numMinutes < 10 && numSeconds >= 10) {
@@ -64,18 +66,25 @@ function updateCounter() {
     }
 
     counter.innerHTML=`${tempCount}`;
-
 }
 
 
 function toggleMeditation() {
-    
+
+
+    if (!view.classList.contains("active")) {
+        instruction.style.letterSpacing= "-3px";
+        instruction.innerHTML= `Resuming`;
+    }
+
     if (view.classList.contains("active")) {
         clearInterval(startMeditating);
         view.classList.toggle("active");
+        instruction.innerHTML= `Paused`;
     } else {
         startMeditating = setInterval(updateCounter, 1000);
         view.classList.toggle("active");
+        
         
     }
 }
