@@ -1,3 +1,8 @@
+@font-face {
+    font-family: "Koho";
+    src: url("/KoHo-Regular.ttf") format("truetype");
+  }
+
 * {
     margin: 0;
     padding: 0;
@@ -5,7 +10,7 @@
 }
 
 .main-view {
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; 
+    font-family: "Koho";
     display: grid;
     height: 100vh;
     justify-items: center;
